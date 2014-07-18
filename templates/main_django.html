@@ -6,7 +6,7 @@
   <meta charset="UTF-8">
   {% block title %}<title>{% platform_name %}</title>{% endblock %}
 
- <link rel="icon" type="image/x-icon" href="${static.url('themes/imbacampus-theme/images/favicon.ico')}" />
+  <link rel="icon" type="image/x-icon" href="{% static "themes/imbacampus-theme/images/favicon.ico" %}" />
 
   {% compressed_css 'style-vendor' %}
   {% compressed_css 'style-app' %}
