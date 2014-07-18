@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 {% load compressed %}{% load sekizai_tags i18n microsite %}{% load url from future %}{% load staticfiles %}
-<%namespace name='static' file='static_content.html'/>
 <html lang="{{LANGUAGE_CODE}}">
 <head>
   <meta charset="UTF-8">
@@ -21,7 +20,6 @@
   {% block headextra %}{% endblock %}
   {% render_block "css" %}
 
-  {% microsite_css_overrides_file %}
 
   <!--[if lt IE 9]>
   <script src="{% static 'js/html5shiv.js' %}"></script>
@@ -38,7 +36,7 @@
     {% block bodyextra %}{% endblock %}
   </div>
 
-  {% include "edx_footer.html" %}
+  {% include "footer.html" %}
 
   {% compressed_js 'application' %}
   {% compressed_js 'module-js' %}
