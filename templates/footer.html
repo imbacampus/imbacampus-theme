@@ -1,0 +1,81 @@
+## mako
+<%! from django.core.urlresolvers import reverse %>
+<%! from django.utils.translation import ugettext as _ %>
+<%namespace name='static' file='static_content.html'/>
+
+<div class="wrapper wrapper-footer">
+  <footer>
+    <div class="colophon">
+      <nav class="nav-colophon">
+      <ol>
+          <li class="nav-colophon-01">
+          <a id="about" href="${marketing_link('ABOUT')}">
+              ${_("About")}
+          </a>
+          </li>
+          <!--
+          <li class="nav-colophon-02">
+          <a id="jobs" href="${marketing_link('JOBS')}">
+              ${_("Jobs")}
+          </a>
+          </li>
+          <li class="nav-colophon-03">
+          <a id="press" href="${marketing_link('PRESS')}">
+              ${_("Press")}
+          </a>
+          </li>
+          -->
+          <li class="nav-colophon-04">
+          <a id="faq" href="${marketing_link('FAQ')}">
+              ${_("FAQ")}
+          </a>
+          </li>
+          <li class="nav-colophon-05">
+          <a id="contact" href="${marketing_link('CONTACT')}">
+              ${_("Contact")}
+          </a>
+          </li>
+      </ol>
+      </nav>
+
+      <div class="colophon-about">
+        <img src="${static.url('themes/imbacampus-theme/images/imbacampus-logo.png')}" />
+
+        <p>iMBACampus是由微见教育（TE Education）创建的商科在线教育平台。致力于以创新的方式提供人人可用的商科在线学习互动平台。</p>
+      </div>
+    </div>
+
+    <div class="references">
+      <nav class="nav-social">
+        <ul>
+          <li class="nav-social-01">
+            <a href="" target="_blank" rel="external">
+              <img src="${static.url('themes/imbacampus-theme/images/wjjykj.jpg')}" alt="" style="width: 88px;height: 30px;" />
+            </a>
+          </li>
+          <li class="nav-social-02">
+            <a href="" rel="external">
+              <img src="${static.url('themes/imbacampus-theme/images/TEEDTECHLOGO.jpg')}" alt="" style="width: 135px;height: 30px;" />
+            </a>
+          </li>
+        </ul>
+      </nav>
+
+      <p class="copyright">${_("&copy; 2014 {platform_name}, some rights reserved.").format(platform_name=settings.PLATFORM_NAME)}</p>
+
+      <nav class="nav-legal">
+        <ul>
+          <li class="nav-legal-01">
+            <a href="/tos" target="_blank" >服务条款</a>
+          </li>
+          <li class="nav-legal-01">
+            <a href="/honor" target="_blank" >诚信准则</a>
+          </li>
+          <li class="nav-legal-02">
+            <a href="/privacy" target="_blank" >隐私政策</a>
+          </li>
+        </ul>
+      </nav>
+    </div>
+  </footer>
+</div>
